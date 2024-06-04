@@ -43,7 +43,7 @@ app.post("/order", (req, res) => {
 app.delete("/order/:id", checkOrderId, (req, res) => {
   const index = req.orderIndex;
   console.log(index);
-  orders.splice(index - 1);
+  orders.splice(index , 1);
 
   return res.status(204).json({ message: "Order Deleted" });
 });
