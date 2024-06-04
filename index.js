@@ -41,7 +41,7 @@ app.post("/order", (req, res) => {
 });
 
 app.delete("/order/:id", checkOrderId, (req, res) => {
-  const index = req;
+  const index = req.orderIndex;
   console.log(index);
   orders.splice(index - 1);
 
